@@ -13,9 +13,10 @@ makeTagDirectory ../ChIPseq/Tag/${i} ${i}.sam
 
 done
 
+## make bedGraph track
 
-makeUCSCfile ./Tag/Control-GR/ -o auto
-makeUCSCfile ./Tag/Treated-GR/ -o auto
+makeUCSCfile /Tag/Control-GR/ -o auto
+makeUCSCfile /Tag/Treated-GR/ -o auto
 
 ## find peaks in control and treated samples over input
 
