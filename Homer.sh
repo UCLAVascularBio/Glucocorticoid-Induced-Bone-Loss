@@ -1,9 +1,5 @@
 #!/bin/bash
 
-module load anaconda3
-conda activate
-module load homer/4.11.1
-
 ## makeTagDirectory
 
 for i in $(ls /data/*.sam|rev|cut -c5-|rev|uniq)
