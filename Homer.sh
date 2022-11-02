@@ -27,7 +27,7 @@ findPeaks Treated-GR_S8/ -style factor -i Input-T_S2/ -o treated_GR_over_inputT_
 findPeaks Treated-GR_S8/ -style factor -i Control-GR_S7/ -o treated_GR_over_control_peaks.txt
 
 
-## find motif occurrance
+## find motif occurrence
 findMotifsGenome.pl control_GR_over_input_peaks.txt mm10 Control-GR_Motif/ -size 200 -preparsedDir preparse/
 
 findMotifsGenome.pl treated_GR_over_inputT_peaks.txt mm10 Treated-GR_Motif/ -size 200 -preparsedDir preparse/
