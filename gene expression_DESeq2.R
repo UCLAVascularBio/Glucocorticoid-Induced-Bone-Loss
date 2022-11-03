@@ -3,8 +3,6 @@
 library(DESeq2)
 library(ggplot2)
 library("EnhancedVolcano")
-library("pheatmap")
-library("RColorBrewer")
 
 # number of reads per gene were counted along STAR mapping from each sample
 countData <- read.csv('STAR_readscounts.csv', header = TRUE, row.names = 1)
@@ -55,8 +53,10 @@ EnhancedVolcano(res,
                 caption = 'log2FC cutoff, 1; padj cutoff, 0.05', 
                 legendLabels = c("NS", expression(Log[2] ~ FC), "padj", expression(padj ~ and ~ log[2] ~ FC)))
 
-# write normalized counts output file
+# write output file of normalized gene counts
 write.csv(counts(dds, normalized=T),file='normalized_counts.csv')
+
+
 
 
 
